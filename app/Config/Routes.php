@@ -32,6 +32,9 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'User::index');
+$routes->get('/edit/(:num)', 'User::edit/$1');
+// $routes->get('user/update/(:num)', 'User::update/$1');
+// $routes->get('/update/(:segment)', 'User::update/$1');
 
 /*
  * --------------------------------------------------------------------

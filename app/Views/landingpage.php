@@ -21,11 +21,12 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container px-5">
-            <a class="navbar-brand" href="#page-top">Landing Page</a>
+            <a class="navbar-brand" href="">Landing Page</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#!">Change User Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href=""><?= user()->fullname; ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="edit/<?= user()->id; ?>">Change User Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('logout'); ?>">Sign Out</a></li>
                 </ul>
             </div>
@@ -37,7 +38,7 @@
             <div class="container px-5">
                 <img src="img/<?= user()->user_img; ?>" alt="" style="width:30%;border-radius: 75px; padding: 20px;">
                 <h2 class="masthead-subheading mb-0">
-                    Hallo <?= user()->username; ?>
+                    Welcome <?= user()->username; ?>
                 </h2>
                 <h2 class="masthead-subheading mb-0">
                     with email <?= user()->email; ?>
